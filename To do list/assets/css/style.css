@@ -1,0 +1,146 @@
+body{
+    font-family: "Lato", sans-serif;
+    background: linear-gradient(45deg, rgba(63,94,251,1), rgba(252,70,107,1), #7462ff);
+    background-size: 300% 300%;
+    height: 100vh;
+    width: 100%;
+    animation: color 12s ease-in-out infinite;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.content-add-item{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap; /*responsividade!*/
+}
+
+#button-new-task, #input-new-task{
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    padding: 1rem;
+}
+
+#input-new-task{
+    width: 20rem;
+    border-radius: 1rem;
+}
+
+#button-new-task{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#button-new-task:hover{
+    background-color: rgb(240, 240, 240);
+}
+
+#to-do-list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#to-do-list li{
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#to-do-list li div{
+    display: flex;
+    gap: 10px
+}
+
+.button-task{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#btn-ok, #btn-edit{
+    border: none;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-size: 1rem;
+    padding: .4rem .8rem;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+#btn-ok:hover, #btn-edit:hover{
+    color: rgb(114, 114, 114);
+}
+
+#to-do-list li:hover{
+    background-color: rgba(255, 255, 255, 0.308);
+    transition: .4s;
+    border-radius: 50px;
+    padding-left: 1rem;
+}
+
+/*animação do background*/
+
+@keyframes color{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+/*responsividade*/
+
+@media screen and (max-width: 1114px){
+    .content{
+        display: block;
+        align-items: center;
+    }
+    .content-add-item{
+        display: flex;
+    }
+    #input-new-task{
+        width: 60%;
+        display: flex;
+    }
+    #to-do-list li:hover{
+        background-color: rgba(255, 255, 255, 0.308);
+        transition: .4s;
+        border-radius: 50px;
+        margin: 6px;
+        padding-left: 1rem;
+        padding: 0.6rem;
+        height: 40%;
+    }
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap')
